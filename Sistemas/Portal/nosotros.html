@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.0.0.58475 -->
+    <meta charset="utf-8">
+    <title>nosotros</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+
+
+<script>jQuery(function($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainerRecorridoALberto1206151940x300").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("vertical", "prev", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                var items = helper.items(helper.current(0), helper.next(0));
+                helper.setBackground(inner, items);
+                helper.setPosition(inner, items);
+
+                slideContainer.on("beforeSlide", function () {
+                    var activeItem = $(".active", this),
+                        nextItem = $(".next, .prev", this),
+                        activePos = $(".art-slide-item", this).index(activeItem),
+                        nextPos = $(".art-slide-item", this).index(nextItem),
+                        currentItems = helper.items(helper.current(activePos), helper.current(nextPos));
+
+                    helper.transition(inner, false);
+                    helper.setBackground(inner, currentItems);
+                    helper.setPosition(inner, currentItems);
+                    if (inner.length) {
+                        tmp = inner.get(0).offsetHeight;
+                    }
+
+                    var movedCurrentItems = helper.items(helper.current(activePos), helper.current(nextPos), true);
+                    helper.transition(inner, true);
+                    helper.setPosition(inner, movedCurrentItems);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "vertical",
+                direction: "prev",
+                navigator: slideContainer.siblings(".art-slidenavigatorRecorridoALberto1206151940x300"),
+                helper: helper
+                            });
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { border-top-width:1px;border-top-style:dotted;border-top-color:#949494;margin-top: 10px;margin-bottom: 10px;  }
+.art-content .art-postcontent-0 .layout-item-1 { padding-right: 10px;padding-left: 10px;  }
+.art-content .art-postcontent-0 .layout-item-2 { color: #2B2B2B; background: #FFFFFF;  border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-3 { border-top-style:dotted;border-right-style:dotted;border-bottom-style:dotted;border-left-style:dotted;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#949494;border-right-color:#949494;border-bottom-color:#949494;border-left-color:#949494; color: #2B2B2B; background: #FFFFFF; padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px; border-radius: 30px;  }
+.art-content .art-postcontent-0 .layout-item-4 { margin-top: 0px;  }
+.art-content .art-postcontent-0 .layout-item-5 { color: #242424; background:  url('images/780cc.png') bottom center no-repeat scroll;  }
+.art-content .art-postcontent-0 .layout-item-6 { color: #242424; padding: 0px;  }
+.ie7 .post .layout-cell {border:none !important; padding:0 !important; }
+.ie6 .post .layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainerRecorridoALberto1206151940x300 {
+    position: relative;
+        width: 920px;
+    height: 293px;
+        }
+
+.art-slidecontainerRecorridoALberto1206151940x300 .art-slide-item
+{
+
+}
+
+
+.art-slidecontainerRecorridoALberto1206151940x300 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out top;
+    -moz-transition: 600ms ease-in-out top;
+    -ms-transition: 600ms ease-in-out top;
+    -o-transition: 600ms ease-in-out top;
+    transition: 600ms ease-in-out top;
+    position: relative;
+    display: none;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .active, .art-slidecontainerRecorridoALberto1206151940x300 .next, .art-slidecontainerRecorridoALberto1206151940x300 .prev {
+    display: block;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .active {
+    top: 0;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .next, .art-slidecontainerRecorridoALberto1206151940x300 .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .next {
+    top: 100%;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .prev {
+    top: -100%;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .next.forward, .art-slidecontainerRecorridoALberto1206151940x300 .prev.back {
+    top: 0;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .active.forward {
+    top: -100%;
+}
+
+.art-slidecontainerRecorridoALberto1206151940x300 .active.back {
+    top: 100%;
+}
+
+
+
+.art-slideRecorridoALberto1206151940x3000 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3000.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideRecorridoALberto1206151940x3001 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3001.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideRecorridoALberto1206151940x3002 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3002.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideRecorridoALberto1206151940x3003 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3003.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideRecorridoALberto1206151940x3004 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3004.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+.art-slideRecorridoALberto1206151940x3005 {
+    background-image:  url('images/slideRecorridoALberto1206151940x3005.jpg');
+    background-position:  0 0;
+    background-repeat: no-repeat;
+}
+
+
+.art-slidenavigatorRecorridoALberto1206151940x300 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 269px;
+  left: 86.52%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatorRecorridoALberto1206151940x300
+{
+background: #7A7A7A;background: linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;background: -webkit-linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;background: linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(161, 161, 161, 0.6) 0, rgba(128, 128, 128, 0.6) 43%, rgba(84, 84, 84, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatorRecorridoALberto1206151940x300 > a
+{
+background: #474747;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorRecorridoALberto1206151940x300 > a.active
+{
+background: #C7C7C7;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorRecorridoALberto1206151940x300 > a:hover
+{
+background: #949494;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+<body>
+<div id="art-main">
+<header class="art-header clearfix">
+
+
+    <div class="art-shapes">
+<h1 class="art-headline" data-left="41.37%">
+    <a href="#">Alcaldia DE mariño</a>
+</h1>
+<h2 class="art-slogan" data-left="42.38%">¡Cabemos Todos!</h2>
+
+
+            </div>
+
+                
+                    
+</header>
+<nav class="art-nav clearfix">
+    <div class="art-nav-inner">
+    <ul class="art-hmenu"><li><a href="inicio.html">Inicio</a></li><li><a href="nosotros.html" class="active">Nosotros</a><ul class="active"><li><a href="nosotros/resena-historica.html">Reseña Historica</a></li><li><a href="nosotros/mision.html">Misión</a></li><li><a href="nosotros/vision.html">Visión</a></li><li><a href="nosotros/organigrama.html">Organigrama</a></li></ul></li><li><a href="contactanos.html">Contactanos</a></li></ul> 
+        </div>
+    </nav>
+<div class="art-sheet clearfix">
+            <div class="art-layout-wrapper clearfix">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content clearfix"><article class="art-post art-article">
+                                
+                                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 100%" >
+        <p style="text-align: center;"><span style="font-weight: bold; text-shadow: #171717 0px 0px 12px; color: #A80600;">Nosotros</span></p>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout-br layout-item-0">
+</div><div class="art-content-layout layout-item-2">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-3" style="width: 100%" >
+        <p></p>
+        <ul>
+        <li><a href="nosotros/resena-historica.html" target="_self">Reseña Historica</a></li>
+        </ul>
+        <ul>
+        <li><a href="nosotros/mision.html" target="_self">Misión</a></li>
+        </ul>
+        <ul>
+        <li><a href="nosotros/vision.html" target="_self">Visión</a></li>
+        </ul>
+        <ul>
+        <li><a href="nosotros/organigrama.html" target="_self">Organigrama</a><br></li>
+        </ul>
+        <a href="nosotros/organigrama.html" target="_self"></a>
+        <p></p>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout-wrapper layout-item-4">
+<div class="art-content-layout layout-item-5">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-6" style="width: 100%" >
+        <p> </p>
+<div id="RecorridoALberto1206151940x300" style="position: relative; display: inline-block; z-index: 0; margin: 15px;  border-width: 0px;  " class="art-collage">
+<div class="art-slider art-slidecontainerRecorridoALberto1206151940x300">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3000">
+
+</div>
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3001">
+
+</div>
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3002">
+
+</div>
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3003">
+
+</div>
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3004">
+
+</div>
+<div class="art-slide-item art-slideRecorridoALberto1206151940x3005">
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigatorRecorridoALberto1206151940x300">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
+        <p><br></p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+                                
+                </article></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<footer class="art-footer clearfix">
+  <div class="art-footer-inner">
+<div class="art-content-layout layout-item-0">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 20%">
+        <p style="font: 18px Arial; color: #444444">Mariño</p>
+        <br>
+        <ul>
+        <li><a href="principal.html" target="_self">Inicio</a><a href="principal.html" target="_self"></a></li>
+        <li><a href="nosotros.html" target="_self">Nosotros</a><a href="#"></a></li>
+        <li><a href="nosotros/resena-historica.html" target="_self">Historia</a></li>
+        </ul>
+    </div><div class="art-layout-cell layout-item-1" style="width: 20%">
+        <p style="font: 18px Arial; color: #444444">Información</p>
+        <br>
+        <ul>
+        <li><a href="#" target="_self">Mapa</a><a href="#"></a></li>
+        <li><a href="contactanos.html" target="_self">Direccion</a></li>
+        <li><a href="contactanos.html" target="_self">Contactanos</a><a href="#"></a></li>
+        </ul>
+    </div><div class="art-layout-cell layout-item-1" style="width: 20%">
+        <p style="font: 18px Arial; color: #444444">Empresa</p>
+        <br>
+        <ul>
+        <li><a href="#" target="_self">Compañia</a><a href="#"></a></li>
+        <li><br></li>
+        </ul>
+    </div><div class="art-layout-cell layout-item-1" style="width: 40%">
+        <p style="text-align: right;"><span style="font-weight: bold;"><br></span></p>
+        <p style="text-align: right;"><span style="font-weight: bold; color: #141414;">Alcaldia del Municipio Santiago Mariño</span><br></p>
+        <p style="text-align: right;"><span style="font-weight: bold;"><br></span></p>
+        <p style="text-align: right;"><span style="font-weight: bold; color: #141414;">2015 © copyright Todos los derechos reservados</span></p>
+        <p style="text-align: right;"><span style="font-weight: bold;"><br></span></p>
+        <p style="text-align: right;"><span style="font-weight: bold; color: #141414;">Desarrollado por <a href="#" target="_self">Lerg Ruiz</a></span></p>
+        <p style="text-align:right"><br></p>
+    </div>
+    </div>
+</div>
+
+  </div>
+</footer>
+
+</div>
+
+
+</body></html>
